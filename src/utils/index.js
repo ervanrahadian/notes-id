@@ -28,20 +28,6 @@ export const editData = (data, setData, event, index) => {
   setData(newData);
 };
 
-// export const updateStatusData = (data, setData, index) => {
-//   let newData = [...data];
-
-//   if (newData[index].isDone) {
-//     newData[index].isDone = false;
-//   } else {
-//     newData[index].isDone = true;
-//   }
-
-//   localStorage.setItem("data", JSON.stringify(newData));
-
-//   setData(newData);
-// };
-
 export const updateStatusData = (data, setData, event, index) => {
   let newData = [...data];
 

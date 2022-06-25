@@ -21,7 +21,7 @@ function App() {
     <>
       <div className="nav margin-bottom-20">
         <h1 className="nav-title">
-          <FontAwesomeIcon icon="fa-solid fa-list-check" /> Note.id
+          <FontAwesomeIcon icon="fa-solid fa-list-check" /> Notes.id
         </h1>
       </div>
 
@@ -66,24 +66,6 @@ function App() {
               />
 
               <div className="center-flex">
-                {/* <button
-                  className={
-                    singleData.isDone
-                      ? "btn-done margin-10"
-                      : "btn-ongoing margin-10"
-                  }
-                  onClick={() => updateStatusData(data, setData, index)}
-                >
-                  {singleData.isDone ? (
-                    <>
-                      <FontAwesomeIcon icon="fa-solid fa-check" /> Done
-                    </>
-                  ) : (
-                    <>
-                      <FontAwesomeIcon icon="fa-solid fa-hourglass" /> Ongoing
-                    </>
-                  )}
-                </button> */}
                 <select
                   className={
                     singleData.isDone
