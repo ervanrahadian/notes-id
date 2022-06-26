@@ -20,7 +20,7 @@ Hosting URL: [NOTES.ID: Notes Your Future](https://notesid.web.app/).
 
 ## Performances
 
-<img src="perfect-score.png" alt="perfect-score">
+<img src="almost-perfect-score.png" alt="perfect-score">
 
 <img src="performance.png" alt="performance">
 

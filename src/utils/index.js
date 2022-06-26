@@ -6,16 +6,45 @@ export const getData = () => {
   }
 };
 
-export const addData = (data, setData, note, setNote) => {
+export const resizeAddBox = (addedData, setAddedData) => {
+  let newData = { ...addedData };
+
+  if (newData.isResize) {
+    newData.isResize = false;
+  } else {
+    newData.isResize = true;
+  }
+
+  setAddedData(newData);
+};
+
+export const addData = (data, setData, addedData, setAddedData) => {
   let newData = [...data];
 
-  newData = [{ note: note, isDone: false }, ...newData];
+  newData = [
+    { note: addedData.note, isDone: false, isResize: false },
+    ...newData,
+  ];
 
   localStorage.setItem("data", JSON.stringify(newData));
 
   setData(newData);
 
-  setNote("");
+  setAddedData({ note: "", isResize: false });
+};
+
+export const resizeEditBox = (data, setData, index) => {
+  let newData = [...data];
+
+  if (newData[index].isResize) {
+    newData[index].isResize = false;
+  } else {
+    newData[index].isResize = true;
+  }
+
+  localStorage.setItem("data", JSON.stringify(newData));
+
+  setData(newData);
 };
 
 export const editData = (data, setData, event, index) => {
